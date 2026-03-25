@@ -1,16 +1,18 @@
-import { test as base } from "@playwright/test";
-import { ElementsSteps } from "../steps/ElementsSteps"; // Мы его создадим следующим шагом
+import { test as base, expect } from "@playwright/test";
+import { ElementsSteps } from "../steps/ElementsSteps";
 
-// Объявляем типы наших степов
-type MySteps = {
+
+type MyFixtures = {
   elementsSteps: ElementsSteps;
 };
 
-export const test = base.extend<MySteps>({
-  // Инициализируем степы. Playwright сам прокинет 'page' внутрь.
+// Расширяем базовый тест
+export const test = base.extend<MyFixtures>({
   elementsSteps: async ({ page }, use) => {
-    await use(new ElementsSteps(page));
+    // Создаем экземпляр степов и передаем его в тест
+    const elementsSteps = new ElementsSteps(page);
+    await use(elementsSteps);
   },
 });
 
-export { expect } from "@playwright/test";
+export { expect };
