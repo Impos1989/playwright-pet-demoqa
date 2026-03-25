@@ -1,17 +1,18 @@
 import { test as base, expect } from "@playwright/test";
 import { ElementsSteps } from "../steps/ElementsSteps";
-
+import { TextBoxSteps } from "../steps/TextBoxSteps";
 
 type MyFixtures = {
   elementsSteps: ElementsSteps;
+  textBoxSteps: TextBoxSteps;
 };
 
-// Расширяем базовый тест
 export const test = base.extend<MyFixtures>({
   elementsSteps: async ({ page }, use) => {
-    // Создаем экземпляр степов и передаем его в тест
-    const elementsSteps = new ElementsSteps(page);
-    await use(elementsSteps);
+    await use(new ElementsSteps(page));
+  },
+  textBoxSteps: async ({ page }, use) => {
+    await use(new TextBoxSteps(page));
   },
 });
 
