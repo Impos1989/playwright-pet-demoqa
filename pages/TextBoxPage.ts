@@ -9,10 +9,12 @@ export class TextBoxPage extends BasePage {
 
   readonly submitButton = this.page.getByRole("button", { name: "Submit" });
 
-  readonly outputName = this.page.locator("#name");
-  readonly outputEmail = this.page.locator("#email");
-  readonly outputCurrentAddress = this.page.locator("#currentAddress");
-  readonly outputPermanentAddress = this.page.locator("#permanentAddress");
+  readonly outputName = this.page.locator("#output #name");
+  readonly outputEmail = this.page.locator("#output #email");
+  readonly outputCurrentAddress = this.page.locator("#output #currentAddress");
+  readonly outputPermanentAddress = this.page.locator(
+    "#output #permanentAddress",
+  );
 
   constructor(page: Page) {
     super(page);
