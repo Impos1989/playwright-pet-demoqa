@@ -20,6 +20,18 @@ export class TextBoxSteps {
     });
   }
 
+  async fillCurrentAddress(address: string): Promise<void> {
+    await test.step(`Ввести текущий адрес: ${address}`, async () => {
+      await this.textBoxPage.currentAddressInput.fill(address);
+    });
+  }
+
+  async fillPermanentAddress(address: string): Promise<void> {
+    await test.step(`Ввести постоянный адрес: ${address}`, async () => {
+      await this.textBoxPage.permanentAddressInput.fill(address);
+    });
+  }
+
   async submitForm(): Promise<void> {
     await test.step("Нажать кнопку Submit", async () => {
       await this.textBoxPage.submitButton.click();
