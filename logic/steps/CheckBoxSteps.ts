@@ -16,7 +16,7 @@ export class CheckBoxSteps {
 
   async checkHome(): Promise<void> {
     await test.step('Выбрать чекбокс "Home"', async () => {
-      await this.checkBoxPage.homeCheckBox.click();
+      await this.checkBoxPage.homeCheckBox.click({ force: true });
     });
   }
 }

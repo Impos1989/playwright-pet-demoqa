@@ -6,10 +6,9 @@ export class CheckBoxPage extends BasePage {
     name: "Expand all",
   });
 
-  readonly homeCheckBox = this.page
-    .locator("label")
-    .filter({ hasText: "Home" })
-    .locator(".rct-checkbox");
+  readonly homeCheckBox = this.page.getByRole("checkbox", {
+    name: "Select Home",
+  });
 
   readonly resultText = this.page.locator("#result");
 
