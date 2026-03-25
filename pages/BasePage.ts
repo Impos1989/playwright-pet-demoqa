@@ -7,7 +7,7 @@ export class BasePage {
     this.page = page;
   }
 
-  async open(path: string): Promise<void> {
-    await this.page.goto(path);
+  async open(path: string = ""): Promise<void> {
+    await this.page.goto(`${path}`);
   }
 }
