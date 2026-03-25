@@ -1,5 +1,8 @@
-Project: DemoQA
-Status: Исправление бага "Strict Mode Violation" в Text Box.
-Bug: Дублирование ID #currentAddress на странице.
-Fix: Уточнены локаторы блока вывода через родительский селектор #output.
-Next Step: Повторный запуск тестов.
+# CONTEXT.MD (Pet Project Playwright)
+- **Project:** DemoQA (Automation)
+- **Architecture:** Layered POM + DI.
+- **Current Status:** 
+  - `ElementsSteps` исправлен: добавлен `this.page` для ассертов URL.
+  - Добавлены нативные проверки `toHaveURL` в методы навигации.
+  - Фикстура `checkBoxSteps` зарегистрирована в `test-setup.ts`.
+- **Next Step:** Написание теста `smokeCheck.spec.ts`.

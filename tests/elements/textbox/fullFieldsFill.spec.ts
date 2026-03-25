@@ -1,7 +1,7 @@
 import { test, expect } from "../../../logic/fixtures/test-setup";
 import { EXPECTED_USER } from "../../../utils/test-data";
 
-test("Полное заполнение всех полей формы @RegressBL", async ({
+test("Полное заполнение всех полей формы @SmokeRun", async ({
   elementsSteps,
   textBoxSteps,
 }) => {

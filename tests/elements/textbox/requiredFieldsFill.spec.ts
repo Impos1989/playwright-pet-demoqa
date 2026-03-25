@@ -1,7 +1,7 @@
 import { test, expect } from "../../../logic/fixtures/test-setup";
 import { EXPECTED_USER } from "../../../utils/test-data";
 
-test("Краткое заполнение формы (только обязательные поля) @Smoke", async ({
+test("Краткое заполнение формы (только обязательные поля) @SmokeRun", async ({
   elementsSteps,
   textBoxSteps,
 }) => {

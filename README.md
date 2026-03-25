@@ -25,4 +25,5 @@
 
 ### 🚦 Запуск
 `npx playwright test`
-`npx playwright test --grep @Smoke`
+`npx playwright test tests/elements/textbox/fullFieldsFill.spec.ts`
+`npx playwright test --grep "@SmokeRun"`
