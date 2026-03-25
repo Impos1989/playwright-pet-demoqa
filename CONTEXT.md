@@ -3,7 +3,7 @@
 - **Architecture:** Layered POM + DI.
 - **Current Status:** 
   - Репозиторий на GitHub связан.
-  - README.md оформлен с манифестом.
-  - BasePage.ts готов.
-- **Rules:** No Chaining, Strict TS, Web-First Assertions.
-- **Next Step:** Реализация первого элемента (например, TextBox) через Pages -> Steps -> Fixtures.
+  - Локаторы в `MainPage` и `ElementsPage` переписаны на User-Facing (Best Practices).
+  - Структура проекта готова к наполнению логикой.
+- **Rules:** No Chaining, Strict TS, Web-First Assertions, User-Facing Locators.
+- **Next Step:** Создание `test-setup.ts` и `ElementsSteps.ts`.

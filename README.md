@@ -21,6 +21,7 @@
 - **Web-First Assertions**: Нативные ожидания Playwright.
 - **Strict TS**: Строгая типизация.
 - **Reporting**: Allure / HTML Report.
+- **Modern Locators**: Приоритет `getByRole`, `getByPlaceholder`, `filter`. Минимум CSS-селекторов и ID.
 
 ### 🚦 Запуск
 `npx playwright test`
